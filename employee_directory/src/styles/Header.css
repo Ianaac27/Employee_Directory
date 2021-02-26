@@ -1,3 +1,13 @@
 .jumbotron {
     box-shadow: 0 3px 6px #999;
 }
+
+@media screen and (max-width:346px){
+    #ifc {
+        font-size: 40px;
+    }
+    
+    #title {
+        font-size: 20px;
+    }
+}

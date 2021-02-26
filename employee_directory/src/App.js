@@ -40,7 +40,6 @@ class App extends React.Component {
       return (
         <div className="container">
           <Header search={this.state.search} handleInputChange={this.handleInputChange} />
-          {this.state.search}
           <Body users={this.state.users}/>
         </div>
       );

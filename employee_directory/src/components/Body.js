@@ -8,7 +8,10 @@ function Body({users}) {
                 <div className="card d-flex flex-row">
                     <img src={user.picture.large} alt="profile-image"/>
                     <div className="card-body">
-                        <h5 className="card-title">{user.name.first} {user.name.last}</h5>
+                        <h3 className="name card-title">{user.name.first} {user.name.last}</h3>
+                        <p id="email" className="info">{user.email}</p>
+                        <p className="info">Phone: {user.cell}</p>
+                        <p className="info">Country: {user.location.country}</p>
                     </div>
                 </div>
                 ): ""}

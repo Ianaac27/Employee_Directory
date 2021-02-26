@@ -4,9 +4,6 @@ img {
     width: 40%;
     border-radius: 50%;
     height: 80%;
-    /* border-width: 50px; */
-    border-style: solid;
-    border-color: black;
     box-shadow: 0 3px 6px #999, 0 1px 3px #999;
 }
 
@@ -16,7 +13,7 @@ img {
     height: 175px;
     margin: .75rem;
     position: relative;
-    width: 330px;
+    width: 346px;
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
     text-align: center;
   }
@@ -24,6 +21,20 @@ img {
   .card-body {
       background-color: rgb(162, 227, 247);
       margin-left: 2.5%;
+      overflow: hidden;
+  }
+
+  .name {
+      font-size: 15px;
+      text-align: left;
+  }
+  .info {
+      font-size: 10.5px;
+      text-align: left;
+  }
+
+  #email {
+    margin-top: 15%;
   }
  
   @media screen and (max-width:1000px){
@@ -35,5 +46,67 @@ img {
     img {
         margin-top: 0%;
         margin-left: 2%;
+    }
+
+    .name {
+        font-size: 30px;
+        text-align: center;
+    }
+    .info {
+        font-size: 20px;
+        text-align: left;
+    }
+    #email {
+        margin-top: 10%;
+      }
+     
+}
+
+@media screen and (max-width:770px){
+    .name {
+        font-size: 20px;
+    }
+    .info {
+        font-size: 15px;
+        margin-left: 5%;
+    }
+}
+
+@media screen and (max-width:500px){
+    .name {
+        font-size: 15px;
+    }
+    .info {
+        font-size: 10.5px;
+    }
+}
+
+@media screen and (max-width:415px){
+    img {
+        margin-top: 3%;
+    }
+}
+
+@media screen and (max-width:376px){
+    img {
+        margin-top: 6.5%;
+    }
+}
+
+@media screen and (max-width:346px){
+    img {
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width:285px){
+    img {
+        margin-top: 20%;
+    }
+    .name {
+        font-size: 10px;
+    }
+    .info {
+        font-size: 9px;
     }
 }
