@@ -1,13 +1,14 @@
 import React from "react";
 import Search from "./Search";
+import "../styles/Header.css";
 
 function Header({search, handleInputChange}) {
     return (
         <div className="jumbotron">
-            <h1 className="display-4">Hello, world!</h1>
-            <p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <h1 className="display-4 text-center">IFC Productions</h1>
+            <h2 className="display-5 text-center">Employee Directory</h2>
+            {/* <h2 className="display-4 text-center">Employee Directory</h2> */}
             <hr className="my-4"/>
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
             <Search search={search} handleInputChange={handleInputChange} />
 
         </div>
