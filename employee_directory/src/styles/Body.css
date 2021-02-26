@@ -1,0 +1,30 @@
+img {
+    margin-top: 5%;
+    margin-left: 2%;
+    width: 40%;
+    border-radius: 50%;
+    height: 80%;
+}
+
+  .card {
+    background: #fff;
+    border-radius: 2px;
+    height: 175px;
+    margin: .75rem;
+    position: relative;
+    width: 330px;
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    text-align: center;
+  }
+ 
+  @media screen and (max-width:1000px){
+    .card {
+        height: 10%;
+        width: 100%;
+    }
+
+    img {
+        margin-top: 0%;
+        margin-left: 2%;
+    }
+}
