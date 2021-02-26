@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "./components/Header";
-import Filters from "./components/Filters";
 import Body from "./components/Body";
 import API from "./utils/API";
 
@@ -8,10 +7,9 @@ class App extends React.Component {
 
   state = {
     users : [],
+    otherUsers: [],
     search: ""
   }
-
-//look up how to dynamically pass data from API to screen. Anthony says to review previous assignments from Saturday
 
   componentDidMount() {
     this.getUsers();
@@ -20,7 +18,7 @@ class App extends React.Component {
   getUsers = () => {
     
     API.getUsers()
-      .then(res => this.setState({ users: res.data.results }))
+      .then(res => this.setState({ users: res.data.results, otherUsers: res.data.results }))
       .catch(err => console.log(err));
   };
 
@@ -29,15 +27,21 @@ class App extends React.Component {
     this.setState({
       [name]: value
     });
-  };
+
+    const filteredUsers = this.state.otherUsers.filter(user => {
+      return user.name.first.toLowerCase().includes(value.toLowerCase()) || user.name.last.toLowerCase().includes(value.toLowerCase())      
+    })
+    this.setState({
+      users: filteredUsers
+    })
+  }
  
   render() {
       return (
         <div className="Container">
-          <Header />
-          <Filters handleInputChange={this.handleInputChange}/>
+          <Header search={this.state.search} handleInputChange={this.handleInputChange} />
           {this.state.search}
-          <Body users={this.state.users} search={this.state.search}/>
+          <Body users={this.state.users}/>
         </div>
       );
   }
