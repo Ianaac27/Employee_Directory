@@ -45,39 +45,40 @@ class App extends React.Component {
   };
 
   //Sorting functions
-  sortUsersABC = event => {
+  //Sort Ascending
+  sortUsersASC = event => {
     const {name, value} = event.target;
     this.setState({
       [name]: value
     });
 
-      const sortABC = this.state.users.sort((userA, userB) => 
+      const sortASC = this.state.users.sort((userA, userB) => 
         (userA.name.last > userB.name.last) ? 1 : -1 )
       this.setState({
-        users: sortABC
+        users: sortASC
     });
   }
-  
-  sortUsersZYX = event => {
+
+  //Sort Descending
+  sortUsersDESC = event => {
     const {name, value} = event.target;
     this.setState({
       [name]: value
     });
     
-    const sortZYX = this.state.users.sort((userA, userB) => 
+    const sortDESC = this.state.users.sort((userA, userB) => 
         (userA.name.last < userB.name.last) ? 1 : -1 )
       this.setState({
-        users: sortZYX
+        users: sortDESC
     })
   }
- 
 
 //rendering into HTML format  
   render() {
       return (
         <div className="container">
           <Header search={this.state.search} handleInputChange={this.handleInputChange} />
-          <Sort sortUsersABC={this.sortUsersABC} sortUsersZYX={this.sortUsersZYX}/>
+          <Sort sortUsersASC={this.sortUsersASC} sortUsersDESC={this.sortUsersDESC}/>
           <Body users={this.state.users}/>
         </div>
       );
