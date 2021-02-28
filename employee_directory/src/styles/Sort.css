@@ -1,0 +1,14 @@
+.sort-button {
+    margin-top: -10px;
+    margin-bottom: 5px;
+ 
+}
+
+#down-button, .sort-text {
+     margin-left: 1%;
+}
+
+.sort-text {
+    font-size: 13px;
+    margin-top: -20px;
+}

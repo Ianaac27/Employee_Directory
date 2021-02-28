@@ -1,7 +1,6 @@
 import React from "react";
-import "../styles/Search.css";
 
-function Search ( {search, handleInputChange}) {
+function Search ({search, handleInputChange}) {
     return (
         <nav className="navbar navbar-light d-flex justify-content-center">
             <form className="form-inline">

@@ -8,7 +8,7 @@ class App extends React.Component {
 
   state = {
     users : [],
-    otherUsers: [],
+    unfilteredUsers: [],
     search: ""
   }
 
@@ -19,7 +19,7 @@ class App extends React.Component {
   getUsers = () => {
     
     API.getUsers()
-      .then(res => this.setState({ users: res.data.results, otherUsers: res.data.results }))
+      .then(res => this.setState({ users: res.data.results, unfilteredUsers: res.data.results }))
       .catch(err => console.log(err));
   }
 
@@ -36,7 +36,7 @@ class App extends React.Component {
     })
 
     //Filter function
-    const filteredUsers = this.state.otherUsers.filter(user => {
+    const filteredUsers = this.state.unfilteredUsers.filter(user => {
       return user.name.first.toLowerCase().includes(value.toLowerCase()) || user.name.last.toLowerCase().includes(value.toLowerCase())      
     })
     this.setState({
