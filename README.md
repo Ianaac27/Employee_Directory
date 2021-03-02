@@ -1,7 +1,8 @@
 # Employee_Directory
+
 ## Description
 
-The Employee Directory is an app in which organizes and protects employee information by filtering searches based on the employee’s first and last name. This app is populated with the Random User npm package, and uses React.js to establish the rendering components and functionality for each component. A couple of the functions developed within this app is the search function in which filters each employee’s first and last name, as well as a sort function which sorts the directory of employees by last name. I also utilized Bootstrap as the foundation for styling this app.  
+The Employee Directory is an app in which organizes and protects employee information by filtering searches based on the employee’s first and last name. This app is populated with the Random User npm package, and uses React.js to establish the rendering components and functionality for each component. A couple of the functions developed within this app is the search function in which filters each employee’s first and last name, as well as a sort function which sorts the directory of employees by last name. I also utilized Bootstrap as the foundation for the styling and responsiveness for this app.
 
 ## Table of Contents
 
@@ -22,9 +23,11 @@ MIT
 Ianaac27
 
 # Screenshot
+
 Here is a mock of the Employee Directory.
 
-![Employee_Directory](public/screenshot.png)
+![Employee_Directory](src/styles/screenshot.PNG)
 
 # Link
-Take a look at the live version through Heroku [here.](https://workout-tracker-ifc.herokuapp.com/)
+
+Take a look at the live version through GitHub Pages [here.](https://ianaac27.github.io/Employee_Directory/)
